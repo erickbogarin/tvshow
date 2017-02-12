@@ -1,0 +1,16 @@
+{
+  "source": "./app/scripts",
+  "destination": "./docs",
+  "coverage": false,
+  "experimentalProposal": {
+    "classProperties": true,
+    "objectRestSpread": true,
+    "decorators": true,
+    "doExpressions": true,
+    "functionBind": true,
+    "asyncGenerators": true,
+    "exportExtensions": true,
+    "dynamicImport": true
+  },
+  "includes": ["\\.(js|jsx|es6)$"]
+}
