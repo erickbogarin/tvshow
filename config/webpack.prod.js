@@ -22,15 +22,7 @@ module.exports = function() {
       ],
     },
     plugins: [
-      new HtmlWebpackPlugin({
-        inject: false,
-        minify: {
-          removeComments: true,
-          collapseWhitespace: true,
-        },
-        mobile: true,
-        template: 'index.html'
-      }),       
+      
       new ExtractText('styles/app.[hash].css'),
       new webpack.DefinePlugin({
         'process.env.NODE_ENV': JSON.stringify('production'),
@@ -40,6 +32,14 @@ module.exports = function() {
       }),
       new webpack.optimize.CommonsChunkPlugin({
         names: ['vendor', 'manifest']
+      }),
+      new HtmlWebpackPlugin({
+        minify: {
+          removeComments: true,
+          collapseWhitespace: true
+        },
+        mobile: true,        
+        template: './index.html',        
       }),
       new webpack.LoaderOptionsPlugin({
         minimize: true,

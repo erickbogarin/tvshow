@@ -18,7 +18,7 @@ module.exports = function() {
     plugins: [
       new webpack.HotModuleReplacementPlugin(),
       new webpack.NamedModulesPlugin(),
-      new DashboardPlugin(),
+      new DashboardPlugin(),      
     ],
     devServer: {      
       inline: true,

@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import store from './store';
+import Root from './containers/Root';
+
 import '../styles/main.scss';
 
-const App = () => (
-  <div className="container">
-    <h1>Hello World</h1>    
-  </div>
+ReactDOM.render(
+  <Root store={store}  />, 
+  document.getElementById('app')
 );
-
-ReactDOM.render(<App />, document.getElementById('app'));
