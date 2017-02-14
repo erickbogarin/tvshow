@@ -1,0 +1,12 @@
+exports[`test resetSearch should return an action 1`] = `
+Object {
+  "type": "RESET_SEARCH",
+}
+`;
+
+exports[`test setMovies should return an action 1`] = `
+Object {
+  "payload": Object {},
+  "type": "SET_MOVIES",
+}
+`;

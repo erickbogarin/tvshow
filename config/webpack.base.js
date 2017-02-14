@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = function() {
   return {
-    context: join(__dirname, '../app'),
+    context: join(__dirname, '../app'),    
     entry: './scripts/index.js',
     output: {
       path: resolve(__dirname, '../build'),
@@ -26,8 +26,7 @@ module.exports = function() {
         },
         {
           test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-          use: ['file-loader?name=fonts/[name].[ext]'],
-          include: /fonts/,
+          use: ['file-loader?name=fonts/[name].[ext]'],          
         },
       ]
     },

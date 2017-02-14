@@ -1,0 +1,30 @@
+exports[`test should handle RESET_SEARCH 1`] = `
+Object {
+  "movies": Array [],
+  "page": 0,
+  "total_pages": 0,
+  "total_results": 0,
+}
+`;
+
+exports[`test should handle SET_MOVIES with payload 1`] = `
+Object {
+  "movies": Array [
+    Object {
+      "title": "a",
+    },
+  ],
+  "page": 0,
+  "total_pages": 0,
+  "total_results": 0,
+}
+`;
+
+exports[`test should return initial state 1`] = `
+Object {
+  "movies": Array [],
+  "page": 0,
+  "total_pages": 0,
+  "total_results": 0,
+}
+`;

@@ -7,6 +7,6 @@ import Root from './containers/Root';
 import '../styles/main.scss';
 
 ReactDOM.render(
-  <Root store={store}  />, 
+  <Root store={store} />, 
   document.getElementById('app')
 );

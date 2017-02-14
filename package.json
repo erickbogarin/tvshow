@@ -55,17 +55,32 @@
     "webpack-merge": "^2.6.1"
   },
   "dependencies": {
+    "axios": "^0.15.3",
     "babel-preset-stage-0": "^6.22.0",
     "classnames": "^2.2.5",
     "cross-env": "^3.1.4",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-inlinesvg": "^0.5.5",
     "react-redux": "^5.0.2",
-    "react-router": "next",
-    "redux": "^3.6.0"
+    "react-router": "^3.0.2",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0"
   },
   "engines": {
     "node": ">=6.0.0",
     "npm": ">=3.0.0"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "json"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "app/scripts"
+    ],
+    "verbose": true
   }
 }

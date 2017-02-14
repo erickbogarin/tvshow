@@ -5,6 +5,9 @@
 @import 'variables/bootstrap';
 @import 'variables/common';
 
+// *** Tools
+@import 'tools/mixins';
+
 // *** Base
 @import 'base/animations';
 
@@ -14,3 +17,14 @@
 // *** Vendor
 @import 'vendor/bootstrap';
 @import 'vendor/bootstrap-theme';
+
+// *** Elements
+@import 'elements/base';
+
+// *** Objects
+@import 'objects/layout';
+@import 'objects/icon';
+
+
+// *** Components
+@import 'components/search';

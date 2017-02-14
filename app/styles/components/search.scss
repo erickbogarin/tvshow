@@ -1,0 +1,24 @@
+// search component
+
+.search-box {
+  @extend .d-flex;
+  @extend .flex-column;
+  @extend .justify-content-center;
+  @extend .align-items-center;
+  @extend .text-white;
+}
+
+.search-header {
+  @extend .text-center;
+  @extend .align-items-center;
+
+  &.active {
+    animation: appear .2s;
+  }
+}
+
+.search-body {
+  @extend .d-flex;
+  @extend .justify-content-around;
+  @extend .flex-wrap
+}

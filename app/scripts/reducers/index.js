@@ -1,7 +1,9 @@
 import { combineReducers } from 'redux';
 
+import movieList from './movieList'
+
 const reducers = combineReducers({
-  state: (state = {}) => state
+  movieList
 });
 
 export default reducers;
