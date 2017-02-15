@@ -7,6 +7,7 @@ import * as Actions from '../actions';
 
 import SeachForm from '../components/SearchForm';
 import MovieList from '../components/MovieList';
+import ListPagination from '../components/ListPagination';
 import ListErrors from '../components/ListErrors';
 
 class SearchPage extends Component {
@@ -65,6 +66,15 @@ class SearchPage extends Component {
     }    
   };
 
+  handlePage = page => {
+    this.setState({ loading: true });
+
+    this.props.fetchSearchMovie(
+      this.state.title,
+      page
+    ).then(() => this.setState({ loading: false }));
+  }
+
   render() {    
     const active = this.props.movies.length; 
     return(            
@@ -82,6 +92,11 @@ class SearchPage extends Component {
             disabled={this.state.loading} />                      
         </div>                 
         <ListErrors errors={this.state.errors} />
+        
+        <ListPagination 
+          totalPages={this.props.totalPages}
+          currentPage={this.props.currentPage}
+          handlePage={this.handlePage} />
         <MovieList movies={this.props.movies} />
       </div>
     );
@@ -89,7 +104,9 @@ class SearchPage extends Component {
 }
 
 const mapStateToProps = state => ({
-  movies: state.movieList.movies
+  movies: state.movieList.movies,
+  totalPages: state.movieList.totalPages,
+  currentPage: state.movieList.currentPage
 });
 
 export default connect(mapStateToProps, Actions)(SearchPage);

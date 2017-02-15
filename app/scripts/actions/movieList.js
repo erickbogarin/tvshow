@@ -35,8 +35,8 @@ export function resetSearch() {
  *
  * @returns {Promise}
  */
-export function fetchSearchMovie(title) {
-  const url = `${XHR.ROOT_URL}/3/search/movie?api_key=${XHR.API_KEY}&query=${title}`;
+export function fetchSearchMovie(title, page = 1) {
+  const url = `${XHR.ROOT_URL}/3/search/movie?api_key=${XHR.API_KEY}&query=${title}&page=${page}`;
   
    return dispatch => {
      return axios.get(url).then(res => {      

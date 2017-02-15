@@ -7,7 +7,7 @@ test('should return initial state', () => {
 
 test('should handle SET_MOVIES with payload', () => {
   const currentState = movies(undefined, { type: {}}),
-    payload = { results: [{ title: 'a' }] };
+    payload = { results: [{ title: 'a' }], page: 1 };
 
   const nextState = movies(undefined, { type: ActionTypes.SET_MOVIES, payload});
   
@@ -16,7 +16,7 @@ test('should handle SET_MOVIES with payload', () => {
 });
 
 test('should handle RESET_SEARCH', () => {
-  const payload = { movies: [{ title: 'a' }] },
+  const payload = { movies: [{ title: 'a' }], page: 1 },
     currentState = movies(undefined, { type: ActionTypes.SET_MOVIES, payload}); 
   
   const nextState = movies(undefined, { type: ActionTypes.RESET_SEARCH});

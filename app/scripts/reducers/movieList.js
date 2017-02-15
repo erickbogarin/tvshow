@@ -1,10 +1,10 @@
 import { ActionTypes } from '../constants/index';
 
 const initialState = {
-  page: 0,
+  currentPage: 0,
   movies: [],
-  total_results: 0,
-  total_pages: 0
+  totalResults: 0,
+  totalPages: 0
 };
 
 export default (state = initialState, action) => {
@@ -12,7 +12,10 @@ export default (state = initialState, action) => {
     case ActionTypes.SET_MOVIES:            
       return {
         ...state,
-        movies: action.payload.results || []
+        currentPage: action.payload.page,
+        movies: action.payload.results || [],
+        totalPages: action.payload.total_pages,
+        totalResults: action.payload.total_results
       };
     case ActionTypes.RESET_SEARCH:
       return initialState;
