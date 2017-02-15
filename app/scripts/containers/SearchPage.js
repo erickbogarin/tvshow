@@ -98,6 +98,10 @@ class SearchPage extends Component {
           currentPage={this.props.currentPage}
           handlePage={this.handlePage} />
         <MovieList movies={this.props.movies} />
+        <ListPagination 
+          totalPages={this.props.totalPages}
+          currentPage={this.props.currentPage}
+          handlePage={this.handlePage} />
       </div>
     );
   }
