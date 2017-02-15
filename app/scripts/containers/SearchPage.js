@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
 import classnames from 'classnames';
 import Isvg from 'react-inlinesvg';
@@ -15,6 +16,14 @@ class SearchPage extends Component {
     errors: {}
   };
   
+  componentDidMount() {    
+    ReactDOM.findDOMNode(this).addEventListener('keyup', (e) => {
+      if (e.which === 27) {
+        this.resetSearch(e);
+      }
+    });
+  }
+
   resetSearch = e => {
     e.preventDefault();
     
