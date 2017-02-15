@@ -1,30 +1,30 @@
 import React from 'react';
 import Isvg from 'react-inlinesvg';
+import classnames from 'classnames';
 
-const SearchForm = props => (
-  <div>
-    <form onSubmit={props.handleSubmit}>
-    <fieldset disabled={props.disabled}>    
-      <div className="form-group d-inline-flex">
-        <input
-          name="title"
-          className="form-control"
-          placeholder="Procure seu filme"
-          value={props.title}
-          onChange={props.handleChange} 
-          type="text" />
-      </div>      
+const SearchForm = props => (  
+  <form className="form-horizontal" onSubmit={props.handleSubmit}>
+    <fieldset className="search-input" disabled={props.disabled}>            
+      <input
+        name="title"
+        className="form-control input"
+        placeholder="Procure seu filme"
+        value={props.title}
+        onChange={props.handleChange} 
+        type="text" />                    
       <button 
-        className="btn btn-success btn-sm" 
-        type="submit">
-        <Isvg className="icon" src={require(`../../../assets/media/icons/search.svg`)} />
+        className={classnames('reset', { active: props.title })} 
+        type="reset"
+        onClick={props.handleReset}>
+          <Isvg className="icon" src={require(`../../../assets/media/icons/close.svg`)} />
       </button>
-    </fieldset>  
-  </form>  
-    <button onClick={props.handleReset}>
-      reset
-    </button>      
-  </div>  
+    </fieldset>
+    <button 
+      className="button" 
+      type="submit">
+        <Isvg className="icon" src={require(`../../../assets/media/icons/search.svg`)} />
+      </button>  
+  </form>        
 );
 
 export default SearchForm;

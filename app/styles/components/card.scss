@@ -1,0 +1,19 @@
+// card component
+
+.card-box {  
+  padding-bottom: 30px;
+  text-align: center;
+
+  .image {
+    @media (min-width: 500px) {
+      min-width: 400px;
+      max-width: 400px;
+    }
+  }
+  .title {
+    @media (min-width: 500px) {
+      font-size: .5em;
+    }
+    padding-top: 10px;
+  }
+}

@@ -1,0 +1,15 @@
+// Utilities
+
+//
+// Visibility
+//
+
+.is-hidden {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+.is-visible {
+  opacity: 1 !important;
+  visibility: visible !important;
+}

@@ -1,0 +1,11 @@
+
+.form-horizontal {
+  @extend .d-flex;
+  width: 70%;
+  > .button { 
+    background-color: #DB0E49;   
+    border: none;  
+    cursor: pointer;    
+    color: #FFF;    
+  }
+}

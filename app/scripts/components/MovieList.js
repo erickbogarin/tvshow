@@ -1,14 +1,19 @@
 import React from 'react';
+import classnames from 'classnames';
 
 const MovieList = props => {
+  const searchBody = 'search-body';
   return (
-    <ul className="search-body">
+    <ul className={classnames({ [searchBody]: props.movies.length })}>
       {props.movies.map(movie => 
         <li
-          className="d-flex flex-column" 
-          key={movie.id}>
-          <div>{movie.title}</div>
-          <img src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`} alt={movie.title}/>
+          className="card-box" 
+          key={movie.id}>          
+          <img 
+            className="image"
+            src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`} 
+            alt={movie.title} />
+          <h3 className="title">{movie.title}</h3>
         </li>
       )}
     </ul>  

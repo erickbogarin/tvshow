@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import classnames from 'classnames';
+import Isvg from 'react-inlinesvg';
 import * as Actions from '../actions';
 
 import SeachForm from '../components/SearchForm';
@@ -57,19 +58,21 @@ class SearchPage extends Component {
 
   render() {    
     const active = this.props.movies.length; 
-    return(      
-      <div className={classnames('search-box', {full: !active})}>                
+    return(            
+      <div className={classnames('search-box', {fullscreen: !active})}>        
         <div className={classnames('search-header', {active: active})}>          
-          <h1>Search</h1>          
+          <h1>
+            <Isvg className="logo" src={require(`../../../assets/media/icons/play.svg`)} />
+            <span>Search</span>
+          </h1>          
           <SeachForm            
             handleChange={this.handleChange}
             handleSubmit={this.handleSubmit}
             handleReset={this.resetSearch}
             title={this.state.title}
-            disabled={this.state.loading} />            
-          <ListErrors errors={this.state.errors} />
+            disabled={this.state.loading} />                      
         </div>                 
-
+        <ListErrors errors={this.state.errors} />
         <MovieList movies={this.props.movies} />
       </div>
     );
