@@ -17,7 +17,8 @@
   width: 100%;
   &.active {
     animation: appear .2s;
-    
+    padding-top: 10px;
+
     @media (min-width: 900px) {
       flex-direction: row;
       justify-content: space-around;      
