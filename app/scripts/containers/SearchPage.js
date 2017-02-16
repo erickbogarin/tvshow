@@ -8,7 +8,7 @@ import * as Actions from '../actions';
 import SeachForm from '../components/SearchForm';
 import MovieList from '../components/MovieList';
 import Paginator from '../components/common/paginator';
-import ListErrors from '../components/ListErrors';
+import ListErrors from '../components/common/ListErrors';
 
 class SearchPage extends Component {
   state = {
