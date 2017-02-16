@@ -20,6 +20,18 @@ export function setMovies(movies) {
 }
 
 /**
+ * setSearch
+ *
+ * @returns {Object}
+ */
+export function setTitle(title) {  
+  return {
+    type: ActionTypes.SET_TITLE,
+    payload: title    
+  };
+}
+
+/**
  * resetSearch
  *
  * @returns {Array}
