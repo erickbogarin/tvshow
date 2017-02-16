@@ -3,6 +3,7 @@ import { ActionTypes } from '../constants/index';
 const initialState = {
   currentPage: 0,
   movies: [],
+  movie: {},
   totalResults: 0,
   totalPages: 0
 };

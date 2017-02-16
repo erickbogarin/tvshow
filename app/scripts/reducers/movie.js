@@ -4,6 +4,15 @@ const initialState = {};
 
 export default (state = initialState, action) => {
   switch(action.type) {
+    case ActionTypes.FIND_MOVIE:
+      return {
+        ...state,
+        releaseDate: action.payload.release_date,
+        rated: action.payload.vote_average,
+        overview: action.payload.overview,      
+        posterPath: action.payload.poster_path,
+        title: action.payload.original_title,        
+      };
     default: return state;
   }
 }
