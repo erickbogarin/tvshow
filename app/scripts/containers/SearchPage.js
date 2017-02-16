@@ -7,7 +7,7 @@ import * as Actions from '../actions';
 
 import SeachForm from '../components/SearchForm';
 import MovieList from '../components/MovieList';
-import ListPagination from '../components/ListPagination';
+import Paginator from '../components/common/paginator';
 import ListErrors from '../components/ListErrors';
 
 class SearchPage extends Component {
@@ -66,7 +66,7 @@ class SearchPage extends Component {
     }    
   };
 
-  handlePage = page => {
+  handlePageChanges = page => {
     this.setState({ loading: true });
 
     this.props.fetchSearchMovie(
@@ -93,15 +93,11 @@ class SearchPage extends Component {
         </div>                 
         <ListErrors errors={this.state.errors} />
         
-        <ListPagination 
+        <Paginator 
           totalPages={this.props.totalPages}
           currentPage={this.props.currentPage}
-          handlePage={this.handlePage} />
+          handlePageChanges={this.handlePageChanges} />
         <MovieList movies={this.props.movies} />
-        <ListPagination 
-          totalPages={this.props.totalPages}
-          currentPage={this.props.currentPage}
-          handlePage={this.handlePage} />
       </div>
     );
   }
