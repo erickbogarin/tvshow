@@ -8,7 +8,7 @@ const Header = ({ active }) => {
     <Link className="nav-link" to="/">
       <h1 className={classnames('header-top', {active})}>
         <Isvg className="logo" src={require(`../../../assets/media/icons/play.svg`)} />
-        <span className="label">Search</span>
+        <span className="label">IdaTV</span>
       </h1>
     </Link>
   );
