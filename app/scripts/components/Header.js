@@ -1,11 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router';
+import { connect } from 'react-redux';
 import classnames from 'classnames';
 import Isvg from 'react-inlinesvg';
 
-const Header = ({ active }) => {
+import * as Actions from '../actions';
+
+const Header = ({ active, resetSearch }) => {
   return(
-    <Link className="nav-link" to="/">
+    <Link
+      onClick={() => resetSearch()}
+      className="nav-link" to="/">
       <h1 className={classnames('header-top', {active})}>
         <Isvg className="logo" src={require(`../../../assets/media/icons/play.svg`)} />
         <span className="label">IdaTV</span>
@@ -14,4 +19,4 @@ const Header = ({ active }) => {
   );
 };
 
-export default Header;
+export default connect(null, Actions)(Header);
