@@ -2,6 +2,7 @@ exports[`test should handle RESET_SEARCH 1`] = `
 Object {
   "currentPage": 0,
   "movies": Array [],
+  "title": "",
   "totalPages": 0,
   "totalResults": 0,
 }
@@ -15,6 +16,7 @@ Object {
       "title": "a",
     },
   ],
+  "title": "",
   "totalPages": undefined,
   "totalResults": undefined,
 }
@@ -24,6 +26,7 @@ exports[`test should return initial state 1`] = `
 Object {
   "currentPage": 0,
   "movies": Array [],
+  "title": "",
   "totalPages": 0,
   "totalResults": 0,
 }

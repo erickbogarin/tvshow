@@ -4,3 +4,9 @@ Object {
   "type": "FIND_MOVIE",
 }
 `;
+
+exports[`test resetMovie should return an action 1`] = `
+Object {
+  "type": "RESET_MOVIE",
+}
+`;

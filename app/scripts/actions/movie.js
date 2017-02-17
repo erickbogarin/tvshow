@@ -11,10 +11,21 @@ import { ActionTypes, XHR } from '../constants/index';
  *
  * @returns {Object}
  */
-export function findMovie(movie) { 
+export function findMovie(movie) {
   return {
     type: ActionTypes.FIND_MOVIE,
     payload: movie
+  };
+}
+
+/**
+ * resetMovie
+ *
+ * @returns {Object}
+ */
+export function resetMovie() {
+  return {
+    type: ActionTypes.RESET_MOVIE,
   };
 }
 
@@ -23,11 +34,11 @@ export function findMovie(movie) {
  *
  * @returns {Promise}
  */
-export function fetchFindMovie(movieID) { 
+export function fetchFindMovie(movieID) {
   const url = `${XHR.ROOT_URL}/3/movie/${movieID}?api_key=${XHR.API_KEY}`;
-  
+
    return dispatch => {
-     return axios.get(url).then(res => {      
+     return axios.get(url).then(res => {
       dispatch(findMovie(res.data));
      });
    }

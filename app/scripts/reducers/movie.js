@@ -14,6 +14,8 @@ export default (state = initialState, action) => {
         popularity: action.payload.popularity,
         title: action.payload.original_title,
       };
+    case ActionTypes.RESET_MOVIE:
+      return initialState;
     default: return state;
   }
 }

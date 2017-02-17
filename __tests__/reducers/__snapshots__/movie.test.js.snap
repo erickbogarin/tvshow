@@ -1,1 +1,3 @@
+exports[`Movie handles RESET_SEARCH action 1`] = `Object {}`;
+
 exports[`Movie returns the initial state 1`] = `Object {}`;

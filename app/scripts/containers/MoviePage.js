@@ -12,6 +12,10 @@ class MoviePage extends Component {
     this.props.fetchFindMovie(this.props.params.id);
   }
 
+  componentWillUnmount() {
+    this.props.resetMovie();
+  }
+
   render() {
     const { movie } = this.props;
     return (
