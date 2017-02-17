@@ -9,6 +9,7 @@ import SeachForm from '../components/SearchForm';
 import MovieList from '../components/MovieList';
 import Paginator from '../components/common/paginator';
 import ListErrors from '../components/common/ListErrors';
+import Header from '../components/Header';
 
 class SearchPage extends Component {
   state = {    
@@ -75,16 +76,13 @@ class SearchPage extends Component {
   }
 
   render() {    
-    const active = this.props.movies.length; 
+    const isActive = this.props.movies.length; 
     const { currentPage, totalResults } = this.props;
 
     return(            
-      <div className={classnames('container search-box', {fullscreen: !active})}>        
-        <div className={classnames('search-header', {active: active})}>          
-          <h1>
-            <Isvg className="logo" src={require(`../../../assets/media/icons/play.svg`)} />
-            <span className="label">Search</span>
-          </h1>          
+      <div className={classnames('container search-box', {fullscreen: !isActive})}>                
+        <div className={classnames('search-header', {active: isActive})}>    
+          <Header active={isActive}/>
           <SeachForm            
             handleChange={this.handleChange}
             handleSubmit={this.handleSubmit}
@@ -94,7 +92,7 @@ class SearchPage extends Component {
         </div>                 
         <ListErrors errors={this.state.errors} />
 
-        { !active ? null :
+        { !isActive ? null :
           currentPage > 1 ?
             <h6 className="info">Page {currentPage} of about {totalResults} results</h6> :
             <h6 className="info">About {totalResults} results</h6>            

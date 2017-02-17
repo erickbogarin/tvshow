@@ -11,8 +11,8 @@ class MoviePage extends Component {
   render() {
     const { movie } = this.props;
     return (
-      <div className="container">        
-        <h2>{movie.title}</h2>        
+      <div className="container">
+      <h2>{movie.title}</h2>
         <button onClick={browserHistory.goBack}>Back</button>        
         <div>
           <img 

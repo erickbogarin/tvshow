@@ -1,0 +1,12 @@
+
+.header-top {
+  color: #FFF;  
+}
+
+.header-top.active {  
+  > .label {
+    @media (min-width: 900px) {
+      display: none;
+    }
+  }    
+}

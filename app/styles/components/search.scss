@@ -29,19 +29,13 @@
 
   @media (min-width: 900px) {
     flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-start;      
+    justify-content: space-around;    
   }
 
   > .form {
     width: 90%;
   }
-
-  .label {
-    @media (min-width: 900px) {
-      display: none;
-    }
-  }    
+  
 }
 
 .search-input {
