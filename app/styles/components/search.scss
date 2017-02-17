@@ -4,9 +4,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;  
+  align-items: center;
   @extend .text-white;
-  
+
   > .info {
     align-self: flex-end;
     color: darken(#FFF, 50%);
@@ -17,9 +17,9 @@
 .search-header {
   display: flex;
   flex-direction: column;
-  justify-content: center;      
+  justify-content: center;
   align-items: center;
-  
+
   width: 100%;
 }
 
@@ -29,41 +29,41 @@
 
   @media (min-width: 900px) {
     flex-direction: row;
-    justify-content: space-around;    
+    justify-content: space-around;
   }
 
   > .form {
     width: 90%;
   }
-  
+
 }
 
 .search-input {
-  position: relative;  
+  position: relative;
   width: 100%;
-  
+
   > .input {
     border-radius: 0;
-    background-color: #FEFEFE;    
+    background-color: #FEFEFE;
     border: none;
 
     box-sizing: border-box;
-    font-weight: bold;    
-    
+    font-weight: bold;
+
     display: block;
     padding: 10px;
 
-    width: 100%;       
-    height: 50px;     
-    
-    @include placeholder {            
+    width: 100%;
+    height: 50px;
+
+    @include placeholder {
       font-weight: bold;
-      font-family: 'Roboto Slab', serif;   
+      font-family: 'Roboto Slab', serif;
     }
-    &.active {            
+    &.active {
       transition: .2s;
       width: 600px;
-    }        
+    }
   }
 
   > .reset {
@@ -71,7 +71,7 @@
     border: none;
 
     position: absolute;
-    top: 50%;    
+    top: 50%;
     right: 0;
     transform: translateY(-50%);
 
@@ -91,9 +91,9 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  
+
   background-color: rgb(38, 38, 38);
-  box-shadow: 0 3px 6px #191919;  
-     
-  padding: 40px 0;  
+  box-shadow: 0 3px 6px #191919;
+
+  padding: 40px 0;
 }

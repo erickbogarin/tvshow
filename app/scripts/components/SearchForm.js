@@ -8,7 +8,7 @@ const SearchForm = props => (
       <input
         name="title"
         className="form-control input"
-        placeholder="Procure seu filme"
+        placeholder="Search for your favorites movies"
         value={props.title}
         onChange={props.handleChange}
         type="text" />
