@@ -1,29 +1,45 @@
 // search component
 
 .search-box {
-  @extend .d-flex;
-  @extend .flex-column;
-  @extend .justify-content-center;
-  @extend .align-items-center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
   @extend .text-white;
+
+  > .info {
+    align-self: flex-end;
+    color: darken(#FFF, 50%);
+    font-size: 14px;
+  }
 }
 
 .search-header {
-  @extend .d-flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;      
-  @extend .align-items-center;
+  align-items: center;
   
   width: 100%;
-  &.active {
-    animation: appear .2s;
-    padding-top: 10px;
+}
 
-    @media (min-width: 900px) {
-      flex-direction: row;
-      justify-content: space-around;      
-    }    
+.search-header.active {
+  animation: appear .2s;
+  padding-top: 10px;
+
+  @media (min-width: 900px) {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;      
   }
+
+  > .form {
+    width: 90%;
+  }
+
+  .label {
+    display: none;
+  }    
 }
 
 .search-input {
@@ -76,10 +92,10 @@
 }
 
 .search-body {
-  @extend .d-flex;
-  @extend .justify-content-around;
-  @extend .flex-wrap;
-
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  
   background-color: rgb(38, 38, 38);
   box-shadow: 0 3px 6px #191919;  
      

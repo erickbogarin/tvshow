@@ -66,6 +66,7 @@ class SearchPage extends Component {
 
   handlePageChanges = page => {
     this.setState({ loading: true });
+    window.scrollTo(0, 0);
 
     this.props.fetchSearchMovie(
       this.props.title,
@@ -75,12 +76,14 @@ class SearchPage extends Component {
 
   render() {    
     const active = this.props.movies.length; 
+    const { currentPage, totalResults } = this.props;
+
     return(            
-      <div className={classnames('search-box', {fullscreen: !active})}>        
+      <div className={classnames('container search-box', {fullscreen: !active})}>        
         <div className={classnames('search-header', {active: active})}>          
           <h1>
             <Isvg className="logo" src={require(`../../../assets/media/icons/play.svg`)} />
-            <span>Search</span>
+            <span className="label">Search</span>
           </h1>          
           <SeachForm            
             handleChange={this.handleChange}
@@ -90,12 +93,17 @@ class SearchPage extends Component {
             disabled={this.state.loading} />                      
         </div>                 
         <ListErrors errors={this.state.errors} />
-        
+
+        { !active ? null :
+          currentPage > 1 ?
+            <h6 className="info">Page {currentPage} of about {totalResults} results</h6> :
+            <h6 className="info">About {totalResults} results</h6>            
+        }  
+        <MovieList movies={this.props.movies} />
         <Paginator 
           totalPages={this.props.totalPages}
           currentPage={this.props.currentPage}
           handlePageChanges={this.handlePageChanges} />
-        <MovieList movies={this.props.movies} />
       </div>
     );
   }
@@ -105,6 +113,7 @@ const mapStateToProps = state => ({
   movies: state.movieList.movies,
   title: state.movieList.title,
   totalPages: state.movieList.totalPages,
+  totalResults: state.movieList.totalResults,
   currentPage: state.movieList.currentPage
 });
 

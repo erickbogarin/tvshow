@@ -3,7 +3,7 @@ import Isvg from 'react-inlinesvg';
 import classnames from 'classnames';
 
 const SearchForm = props => (  
-  <form className="form-horizontal" onSubmit={props.handleSubmit}>
+  <form className="form form-horizontal" onSubmit={props.handleSubmit}>
     <fieldset className="search-input" disabled={props.disabled}>            
       <input
         name="title"
