@@ -1,0 +1,62 @@
+
+//.movie-box { }
+
+.movie-header {
+  background-color: #262626;
+  box-shadow: 0 3px 6px #191919;
+
+  color: white;
+
+  padding: 130px 0;
+  text-align: center;
+
+  > .title {
+    border-bottom: 5px solid #47CF73;
+    display: inline;
+    line-height: 2;
+  }
+}
+
+.movie-overview {
+  color: white;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  > .divider {
+    border-top: 5px solid #fCD000;
+  }
+
+  > .summary {
+    display: flex;
+    padding-top: 20px;
+    flex-direction: column;
+
+    @media (min-width: 1200px) {
+      flex-direction: row;
+    }
+  }
+}
+
+.movie-legend {
+  display: flex;
+
+  > .button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  > .divider {
+    margin: 0 5px;
+    font-size: 1.5em;
+  }
+  > .title {
+    margin-left: 8px;
+  }
+}
+
+.movie-content {
+  .image {
+    align-self: center;
+  }
+}

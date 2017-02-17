@@ -9,9 +9,10 @@ export default (state = initialState, action) => {
         ...state,
         releaseDate: action.payload.release_date,
         rated: action.payload.vote_average,
-        overview: action.payload.overview,      
+        overview: action.payload.overview,
         posterPath: action.payload.poster_path,
-        title: action.payload.original_title,        
+        popularity: action.payload.popularity,
+        title: action.payload.original_title,
       };
     default: return state;
   }
