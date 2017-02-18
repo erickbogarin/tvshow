@@ -13,14 +13,14 @@ module.exports = function() {
           loader: 'style-loader!css-loader?sourceMap!postcss-loader?pack=custom!sass-loader?sourceMap',
         },
       ]
-    },    
-    devtool: 'source-map',    
+    },
+    devtool: 'source-map',
     plugins: [
       new webpack.HotModuleReplacementPlugin(),
       new webpack.NamedModulesPlugin(),
-      new DashboardPlugin(),      
+      new DashboardPlugin(),
     ],
-    devServer: {      
+    devServer: {
       inline: true,
       contentBase: path.resolve(__dirname, '../build'),
       publicPath: '/',

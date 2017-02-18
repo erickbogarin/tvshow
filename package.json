@@ -7,6 +7,8 @@
     "clean": "rimraf build",
     "start": "cross-env NODE_ENV=dev webpack-dashboard -- webpack-dev-server --config config/webpack.config.js",
     "build": "npm run clean && cross-env NODE_ENV=prod webpack --config config/webpack.config.js --env=prod --progress --profile --colors",
+    "predeploy": "npm run build",
+    "deploy": "surge --project build --domain maniacal-surprise.surge.sh",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
     "docs": "node config/tools docs"
@@ -66,7 +68,8 @@
     "react-router": "^3.0.2",
     "react-router-scroll": "^0.4.1",
     "redux": "^3.6.0",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "surge": "^0.18.0"
   },
   "engines": {
     "node": ">=6.0.0",

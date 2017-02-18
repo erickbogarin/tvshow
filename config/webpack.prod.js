@@ -22,7 +22,7 @@ module.exports = function() {
       ],
     },
     plugins: [
-      
+
       new ExtractText('styles/app.[hash].css'),
       new webpack.DefinePlugin({
         'process.env.NODE_ENV': JSON.stringify('production'),
@@ -38,8 +38,8 @@ module.exports = function() {
           removeComments: true,
           collapseWhitespace: true
         },
-        mobile: true,        
-        template: './index.html',        
+        mobile: true,
+        template: './index.html',
       }),
       new webpack.LoaderOptionsPlugin({
         minimize: true,
