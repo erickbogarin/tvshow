@@ -24,7 +24,7 @@ class MoviePage extends Component {
 
         <div className="movie-header">
           <h2 className="title">{movie.title}</h2>
-          <div>Score: {movie.rated} / 10</div>
+          <div className="score">Score: {movie.rated} / 10</div>
         </div>
 
         <div className="container movie-overview">
@@ -43,7 +43,7 @@ class MoviePage extends Component {
               className="image"
               src={`https://image.tmdb.org/t/p/w500/${movie.posterPath}`}
               alt={movie.title} />
-            <div className="container">
+            <div className="container description">
               <p>{movie.overview}</p>
               <div><span className="text-danger">Release Date:</span> {new Date(movie.releaseDate).getFullYear()}</div>
               <div><span className="text-danger">Populrity:</span> {Math.floor(movie.popularity)}</div>

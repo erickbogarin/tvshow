@@ -12,8 +12,13 @@
 
   > .title {
     border-bottom: 5px solid #47CF73;
+    font-size: 1.5em;
     display: inline;
     line-height: 2;
+  }
+
+  > .score {
+    font-size: .75em;
   }
 }
 
@@ -39,6 +44,7 @@
 
 .movie-legend {
   display: flex;
+  align-items: baseline;
 
   > .button {
     background: none;
@@ -48,15 +54,20 @@
 
   > .divider {
     margin: 0 5px;
-    font-size: 1.5em;
+    font-size: 1em;
   }
   > .title {
+    font-size: 1em;
     margin-left: 8px;
   }
 }
 
 .movie-content {
-  .image {
+  > .image {
     align-self: center;
+  }
+
+  > .description {
+    font-size: .75em;
   }
 }
