@@ -22,6 +22,6 @@ export const ActionTypes = {
  */
 
 export const XHR = {
-  ROOT_URL: 'http://api.themoviedb.org',
+  ROOT_URL: 'https://api.themoviedb.org',
   API_KEY: '4d2feed1cba2bdebe6cd6ee1639d2784'
 };
